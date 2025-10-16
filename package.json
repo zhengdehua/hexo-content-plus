@@ -1,0 +1,27 @@
+{
+  "name": "hexo-content-plus",
+  "version": "1.0.0",
+  "description": "Hexo 内容辅助插件。",
+  "homepage": "https://github.com/zhengdehua/hexo-content-plus",
+  "main": "index",
+  "author": "zhengdehua",
+  "bugs": {
+    "url": "https://github.com/zhengdehua/hexo-content-plus/issues"
+  },
+  "keywords": [
+    "hexo",
+    "admonition",
+    "note",
+    "info",
+    "warning",
+    "error"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhengdehua/hexo-content-plus.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

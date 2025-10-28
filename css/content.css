@@ -1,0 +1,240 @@
+/* 定义颜色变量 */
+:root {
+  --info-color: #00b8d41a;
+  --success-color: #00c8531a;
+  --warning-color: #ff91001a;
+  --failure-color: #ff52521a;
+  --quote-color: #9e9e9e1a;
+
+  /* 提取纯色(示例：#00b8d41a 的纯色是 #00b8d4，其余同理) */
+  --info-color-solid: #00b8d4;
+  --success-color-solid: #00c853;
+  --warning-color-solid: #ff9100;
+  --failure-color-solid: #ff5252;
+  --quote-color-solid: #9e9e9e;
+}
+
+/* 基础容器样式(通用部分) */
+.admonition-block {
+  padding-left: .8em !important;
+  margin: 1.5em 0;
+  overflow: hidden;
+  page-break-inside: avoid;
+  border-left: .3rem solid;
+  border-radius: .3rem;
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, .05), 0 0 0.05rem rgba(0, 0, 0, .1);
+}
+
+.admonition-block>.admonition-title {
+  position: relative;
+  margin-left: -1rem;
+  padding: .4rem .5rem;
+  font-weight: 700;
+}
+
+.admonition-block :is(ul, ol) {
+  padding-inline-start: 25px !important;
+}
+
+.admonition-block .admonition-title,
+.hcb-content.block summary,
+.hcb-content.hcb-cards-labels {
+  margin-bottom: 5px !important;
+}
+
+details.hcb-content.block[class*="hcb"],
+div.hcb-content.hcb-cards {
+  border: .05rem solid;
+  border-radius: .2rem;
+  margin: 1.5em 0;
+  transition: box-shadow 250ms;
+}
+
+/* 基础容器额外样式 */
+details.hcb-content.block[class*="hcb"] {
+  border-color: #448aff;
+  padding: 0 .6rem;
+}
+
+/* 类型专属边框色(合并选择器) */
+.admonition-block.admonition-info,
+details.hcb-content.block.hcbinfo,
+div.hcb-content.hcb-cards.hcbinfo {
+  border-color: var(--info-color-solid);
+}
+
+.admonition-block.admonition-success,
+details.hcb-content.block.hcbsuccess,
+div.hcb-content.hcb-cards.hcbsuccess {
+  border-color: var(--success-color-solid);
+}
+
+.admonition-block.admonition-warning,
+details.hcb-content.block.hcbwarning,
+div.hcb-content.hcb-cards.hcbwarning {
+  border-color: var(--warning-color-solid);
+}
+
+.admonition-block.admonition-failure,
+details.hcb-content.block.hcbfailure,
+div.hcb-content.hcb-cards.hcbfailure {
+  border-color: var(--failure-color-solid);
+}
+
+.admonition-block.admonition-quote,
+details.hcb-content.block.hcbquote,
+div.hcb-content.hcb-cards.hcbquote {
+  border-color: var(--quote-color-solid);
+}
+
+/* 聚焦状态阴影(合并选择器) */
+details.hcb-content.block.hcbinfo:focus-within {
+  box-shadow: 0 0 0 .2rem var(--info-color);
+}
+
+details.hcb-content.block.hcbsuccess:focus-within {
+  box-shadow: 0 0 0 .2rem var(--success-color);
+}
+
+details.hcb-content.block.hcbwarning:focus-within {
+  box-shadow: 0 0 0 .2rem var(--warning-color);
+}
+
+details.hcb-content.block.hcbfailure:focus-within {
+  box-shadow: 0 0 0 .2rem var(--failure-color);
+}
+
+details.hcb-content.block.hcbquote:focus-within {
+  box-shadow: 0 0 0 .2rem var(--quote-color);
+}
+
+/* 内部元素盒模型(合并选择器) */
+details.hcb-content.block[class*="hcb"] *,
+div.hcb-content.hcb-cards * {
+  box-sizing: border-box;
+}
+
+/* 标题/摘要样式 */
+details.hcb-content.block[class*="hcb"] summary {
+  display: block;
+  min-height: 1rem;
+  margin: 0 -.6rem 0;
+  padding: .4rem;
+  border: none;
+  border-radius: .1rem .1rem 0 0;
+  font-weight: 700;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+}
+
+/* 标题/摘要背景色(合并选择器) */
+.admonition-block.admonition-info>.admonition-title,
+details.hcb-content.block.hcbinfo summary,
+div.hcb-content.hcb-cards-labels.hcbinfo {
+  background-color: var(--info-color);
+}
+
+.admonition-block.admonition-success>.admonition-title,
+details.hcb-content.block.hcbsuccess summary,
+div.hcb-content.hcb-cards-labels.hcbsuccess {
+  background-color: var(--success-color);
+}
+
+.admonition-block.admonition-warning>.admonition-title,
+details.hcb-content.block.hcbwarning summary,
+div.hcb-content.hcb-cards-labels.hcbwarning {
+  background-color: var(--warning-color);
+}
+
+.admonition-block.admonition-failure>.admonition-title,
+details.hcb-content.block.hcbfailure summary,
+div.hcb-content.hcb-cards-labels.hcbfailure {
+  background-color: var(--failure-color);
+}
+
+.admonition-block.admonition-quote>.admonition-title,
+details.hcb-content.block.hcbquote summary,
+div.hcb-content.hcb-cards-labels.hcbquote {
+  background-color: var(--quote-color);
+}
+
+/* 标题/摘要图标样式 */
+.admonition-block>.admonition-title i,
+details.hcb-content.block summary i,
+details.hcb-content.block[class*="hcb"] summary div.hcb-block-open-button i {
+  margin: 0 .6rem;
+}
+
+/* 展开按钮容器 */
+details.hcb-content.block[class*="hcb"] summary div.hcb-block-open-button {
+  float: right;
+}
+
+/* 展开按钮图标样式 */
+details.hcb-content.block[class*="hcb"] summary div.hcb-block-open-button i {
+  font-size: .7rem;
+  transition: transform 250ms;
+}
+
+/* 展开/折叠状态图标旋转 */
+details.hcb-content.block[class*="hcb"]:not([open]) summary div.hcb-block-open-button i {
+  transform: rotate(270deg);
+}
+
+details.hcb-content.block[class*="hcb"][open] summary div.hcb-block-open-button i {
+  transform: rotate(180deg);
+}
+
+/* 卡片切换radio(隐藏) */
+input.hcb-content.hcb-cards-input {
+  display: none;
+}
+
+/* 卡片标签容器 */
+div.hcb-content.hcb-cards-labels {
+  display: flex;
+  position: relative;
+}
+
+/* 卡片激活指示器 */
+div.hcb-content.hcb-cards-labels:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: var(--cards-color);
+  width: var(--md-indicator-width);
+  transform: translateX(var(--md-indicator-x));
+  transition: width 225ms, transform 250ms cubic-bezier(.4, 0, .2, 1);
+}
+
+/* 卡片标签样式 */
+label.hcb-content.hcb-cards-label {
+  display: block;
+  padding: .45rem 1rem;
+  border-bottom: .1rem solid transparent;
+  border-radius: .1rem .1rem 0 0;
+  color: #0000008a;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 250ms;
+}
+
+/* 卡片标签激活/hover状态 */
+label.hcb-content.hcb-cards-label.active,
+label.hcb-content.hcb-cards-label:hover {
+  color: var(--cards-color);
+}
+
+/* 卡片内容容器 */
+div.hcb-content.hcb-cards-content {
+  display: none;
+  padding: 0 .6rem;
+}
+
+div.hcb-content.hcb-cards-content.active {
+  display: block;
+}

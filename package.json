@@ -1,7 +1,7 @@
 {
   "name": "hexo-content-plus",
-  "version": "1.0.0",
-  "description": "Hexo 内容辅助插件。",
+  "version": "1.0.1",
+  "description": "Hexo 内容辅助插件，提升博客内容的可读性和美观性。",
   "homepage": "https://github.com/zhengdehua/hexo-content-plus",
   "main": "index",
   "author": "zhengdehua",
@@ -11,10 +11,8 @@
   "keywords": [
     "hexo",
     "admonition",
-    "note",
-    "info",
-    "warning",
-    "error"
+    "contentblock",
+    "contentcards"
   ],
   "license": "MIT",
   "repository": {

@@ -32,10 +32,6 @@
   font-weight: 700;
 }
 
-.admonition-block :is(ul, ol) {
-  padding-inline-start: 25px !important;
-}
-
 .admonition-block .admonition-title,
 .hcb-content.block summary,
 .hcb-content.hcb-cards-labels {

@@ -23,6 +23,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "binary-tree-visualizer": "^1.0.5"
+    "binary-tree-visualizer": "^2.1.5"
   }
 }

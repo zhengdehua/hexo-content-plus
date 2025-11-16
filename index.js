@@ -20,12 +20,3 @@ hexo.extend.tag.register('contentblock', function (args, content) {
 hexo.extend.tag.register('contentcards', function (args, content) {
   return contentRender.contentCards(args, content, this);
 }, { ends: true });
-
-// 引入二叉树模块
-const { treeInjector, renderTree } = require('hexo-content-plus/lib/binary-tree.js');
-treeInjector(hexo);
-
-// 注册 binaryTree 标签(二叉树)
-hexo.extend.tag.register('binaryTree', function (args, content) {
-  return renderTree(args, content);
-}, { ends: true });

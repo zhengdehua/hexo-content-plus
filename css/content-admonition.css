@@ -16,7 +16,8 @@
 
 /* 基础容器样式(通用部分) */
 .admonition-block {
-  padding-left: .8em !important;
+  padding-left: .8em;
+  padding-bottom: .5em;
   margin: 1.5em 0;
   overflow: hidden;
   page-break-inside: avoid;
@@ -35,11 +36,12 @@
 .admonition-block .admonition-title,
 .hcb-content.block summary,
 .hcb-content.hcb-cards-labels {
-  margin-bottom: 5px !important;
+  margin-bottom: .5em !important;
 }
 
 details.hcb-content.block[class*="hcb"],
 div.hcb-content.hcb-cards {
+  padding-bottom: .5em !important;
   border: .05rem solid;
   border-radius: .2rem;
   margin: 1.5em 0;

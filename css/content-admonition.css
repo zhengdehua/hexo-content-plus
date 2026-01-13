@@ -28,8 +28,13 @@
 .admonition-block>.admonition-title {
   position: relative;
   margin: 0 -.5em;
-  padding: .4rem .5rem;
+  padding: .4rem .1rem;
   font-weight: 700;
+}
+
+.admonition-block>p,
+.hcb-content>p {
+  margin-left: 5px;
 }
 
 .admonition-block .admonition-title,

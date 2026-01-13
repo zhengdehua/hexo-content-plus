@@ -16,8 +16,7 @@
 
 /* 基础容器样式(通用部分) */
 .admonition-block {
-  padding-left: .8em;
-  padding-bottom: .5em;
+  padding: 0 .5em;
   margin: 1.5em 0;
   overflow: hidden;
   page-break-inside: avoid;
@@ -28,7 +27,7 @@
 
 .admonition-block>.admonition-title {
   position: relative;
-  margin-left: -1rem;
+  margin: 0 -.5em;
   padding: .4rem .5rem;
   font-weight: 700;
 }
